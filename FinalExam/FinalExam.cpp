@@ -101,12 +101,18 @@ void printmenu()
 
 void fillArray(int *arr, const int N)
 {
+	//Test pre-condition
+	assert(N > 0);
+
 	int i;
 
 	//Filling the array to be multiplied of 5's
 
 	for (i = 0; i < N; i++)
 		arr[i] = (i+1) * 5;
+
+	//Test post-condition
+	assert(N == 10);
 }
 
 /**	Function <code>ZeroArray</code> makes all elements of array zero
@@ -117,10 +123,16 @@ void fillArray(int *arr, const int N)
 
 void ZeroArray(int* arr, const int N)
 {
+	//Test pre-condition
+	assert(N > 0);
+
 	int i;
 
 	for (i = 0; i < N; i++)
 		arr[i] = 0;
+
+	//Test post-condition
+	assert(N == 10);
 }
 
 /**	Function <code>printArray</code> shows array
@@ -131,12 +143,18 @@ void ZeroArray(int* arr, const int N)
 
 void printArray(int* arr, const int N)
 {
+	//Test pre-condition
+	assert(N > 0);
+
 	int i;
 
 	for (i = 0; i < N; i++)
 		cout << arr[i] << " ";
 
 	cout << endl;
+
+	//Test post-condition
+	assert(N == 10);
 }
 
 /**	Function <code>printArray</code> Function that sums all the elements of the array
@@ -148,6 +166,9 @@ void printArray(int* arr, const int N)
 
 int sumArray(int* arr, const int N)
 {
+	//Test pre-condition
+	assert(N > 0);
+
 	int i;
 	int count = 0;
 
@@ -155,6 +176,9 @@ int sumArray(int* arr, const int N)
 	{
 		count+=arr[i];
 	}
+
+	//Test post-condition
+	assert(N == 10);
 
 	return count;
 }
