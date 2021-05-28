@@ -27,8 +27,18 @@ int main()
 	cout << "Please enter choice: ";
 	cin >> choice;
 
+	//Checking user's input to be correct
+
+	while (choice < 1 || choice>5)
+	{
+		cout << "Wrong input. Please enter choice again: "
+			cin >> choice;
+	}
+
 	if (choice == 1)
 		fillArray(arr, N);
+
+	else if(choice == 2)
 }
 
 /** Function <code>printmenu</code> prints menu of actions of FinalExam
@@ -57,5 +67,6 @@ void fillArray(int *arr, const int N)
 	//Filling the array to be multiplied of 5's
 
 	for (i = 0; i < N; i++)
-		arr[i] = i * 5;
+		arr[i] = (i+1) * 5;
 }
+
