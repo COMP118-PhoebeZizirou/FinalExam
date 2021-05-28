@@ -33,26 +33,43 @@ int main()
 	cout << "Please enter choice: ";
 	cin >> choice;
 
-	//Checking user's input to be correct
+	if (choice == 5)
+	cout << "Have a nice day :) Bye!" << endl;
 
-	while (choice < 1 || choice>5)
+	while (choice != 5)
 	{
-		cout << "Wrong input. Please enter choice again: ";
+		//Checking user's input to be correct
+
+		while (choice < 1 || choice>5)
+		{
+			cout << "Wrong input. Please enter choice again: ";
 			cin >> choice;
+		}
+
+		if (choice == 1)
+			fillArray(arr, N);
+
+		else if (choice == 2)
+			ZeroArray(arr, N);
+
+		else if (choice == 3)
+			printArray(arr, N);
+
+		else if (choice == 4)
+			cout << "Sum of Array is: " << sumArray(arr, N); \
+
+		cout << endl;
+
+		printmenu();
+
+		cout << "Please enter choice: ";
+		cin >> choice;
 	}
 
-	if (choice == 1)
-		fillArray(arr, N);
+    if (choice == 5)
+	cout << "Have a nice day :) Bye!" << endl;
 
-	else if (choice == 2)
-		ZeroArray(arr, N);
-
-	else if (choice == 3)
-		printArray(arr, N);
-
-	else if (choice == 4)
-		cout << "Sum of Array is: " << sumArray(arr, N);
-
+return 0;
 }
 
 /** Function <code>printmenu</code> prints menu of actions of FinalExam
@@ -110,6 +127,8 @@ void printArray(int* arr, const int N)
 
 	for (i = 0; i < N; i++)
 		cout << arr[i] << " ";
+
+	cout << endl;
 }
 
 /**	Function <code>printArray</code> Function that sums all the elements of the array
