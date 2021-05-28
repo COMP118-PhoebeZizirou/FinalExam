@@ -18,6 +18,8 @@ void fillArray(int *arr, const int N);
 
 void ZeroArray(int* arr, const int N);
 
+void printArray(int* arr, const int N);
+
 int main()
 {
 	int N = 10;		//N -> Size of Array
@@ -40,7 +42,12 @@ int main()
 	if (choice == 1)
 		fillArray(arr, N);
 
-	else if(choice == 2)
+	else if (choice == 2)
+		ZeroArray(arr, N);
+
+	else if (choice == 3)
+		printArray(arr, N);
+
 }
 
 /** Function <code>printmenu</code> prints menu of actions of FinalExam
@@ -84,4 +91,18 @@ void ZeroArray(int* arr, const int N)
 
 	for (i = 0; i < N; i++)
 		arr[i] = 0;
+}
+
+/**	Function <code>printArray</code> shows array
+* <BR>
+* @param arr The array containg all elements
+* @param N	 The size of the array
+*/
+
+void printArray(int* arr, const int N)
+{
+	int i;
+
+	for (i = 0; i < N; i++)
+		cout << arr[i] << " ";
 }
