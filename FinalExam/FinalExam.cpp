@@ -12,19 +12,23 @@
 
 using namespace std;
 
-const int N = 10; 
-
 void printmenu();
+
+void fillArray(int *arr, const int N);
 
 int main()
 {
-	int arr[N];
+	int N = 10;		//N -> Size of Array
+	int arr[10];	//arr -> Name of Array
 	int choice; 
 
 	printmenu();
 
 	cout << "Please enter choice: ";
 	cin >> choice;
+
+	if (choice == 1)
+		fillArray(arr, N);
 }
 
 /** Function <code>printmenu</code> prints menu of actions of FinalExam
@@ -38,4 +42,9 @@ void printmenu()
 	cout << "3) Show array" << endl;
 	cout << "4) Sum of all elements of the array" << endl;
 	cout << "5) Exit" << endl;
+}
+
+void fillArray(int *arr, const int N)
+{
+
 }
