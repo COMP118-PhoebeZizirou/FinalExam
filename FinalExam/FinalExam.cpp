@@ -28,6 +28,14 @@ int main()
 	int arr[10];	//arr -> Name of Array
 	int choice; 
 
+
+	//Initialize array with 0 - Branch1
+
+	for (int i = 0; i < N; i++)
+	{
+		arr[i] = 0;
+	}
+
 	printmenu();
 
 	cout << "Please enter choice: ";
