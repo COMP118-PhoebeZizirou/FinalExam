@@ -20,6 +20,8 @@ void ZeroArray(int* arr, const int N);
 
 void printArray(int* arr, const int N);
 
+int sumArray(int* arr, const int N);
+
 int main()
 {
 	int N = 10;		//N -> Size of Array
@@ -47,6 +49,9 @@ int main()
 
 	else if (choice == 3)
 		printArray(arr, N);
+
+	else if (choice == 4)
+		cout << "Sum of Array is: " << sumArray(arr, N);
 
 }
 
@@ -105,4 +110,24 @@ void printArray(int* arr, const int N)
 
 	for (i = 0; i < N; i++)
 		cout << arr[i] << " ";
+}
+
+/**	Function <code>printArray</code> Function that sums all the elements of the array
+* <BR>
+* @param arr The array containg all elements
+* @param N	 The size of the array
+* @return	 Returns the sum of the array
+*/
+
+int sumArray(int* arr, const int N)
+{
+	int i;
+	int count = 0;
+
+	for (i = 0; i < N; i++)
+	{
+		count+=arr[i];
+	}
+
+	return count;
 }
