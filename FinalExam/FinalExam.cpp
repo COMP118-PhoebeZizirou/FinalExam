@@ -16,6 +16,8 @@ void printmenu();
 
 void fillArray(int *arr, const int N);
 
+void ZeroArray(int* arr, const int N);
+
 int main()
 {
 	int N = 10;		//N -> Size of Array
@@ -31,7 +33,7 @@ int main()
 
 	while (choice < 1 || choice>5)
 	{
-		cout << "Wrong input. Please enter choice again: "
+		cout << "Wrong input. Please enter choice again: ";
 			cin >> choice;
 	}
 
@@ -70,3 +72,16 @@ void fillArray(int *arr, const int N)
 		arr[i] = (i+1) * 5;
 }
 
+/**	Function <code>ZeroArray</code> makes all elements of array zero
+* <BR>
+* @param arr The array containg all elements
+* @param N	 The size of the array
+*/
+
+void ZeroArray(int* arr, const int N)
+{
+	int i;
+
+	for (i = 0; i < N; i++)
+		arr[i] = 0;
+}
