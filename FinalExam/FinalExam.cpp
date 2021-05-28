@@ -64,7 +64,7 @@ int main()
 			printArray(arr, N);
 
 		else if (choice == 4)
-			cout << "Sum of Array is: " << sumArray(arr, N); \
+			cout << "Sum of Array is: " << sumArray(arr, N); 
 
 		cout << endl;
 
