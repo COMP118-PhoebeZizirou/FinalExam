@@ -44,7 +44,18 @@ void printmenu()
 	cout << "5) Exit" << endl;
 }
 
+/**	Function <code>fillArray</code> adds data to the array
+* <BR>
+* @param arr The array containg all elements
+* @param N	 The size of the array
+*/
+
 void fillArray(int *arr, const int N)
 {
+	int i;
 
+	//Filling the array to be multiplied of 5's
+
+	for (i = 0; i < N; i++)
+		arr[i] = i * 5;
 }
